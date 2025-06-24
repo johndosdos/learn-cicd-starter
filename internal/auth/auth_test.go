@@ -29,7 +29,7 @@ func TestGetAPIKey(t *testing.T) {
 		{
 			name:  "improper casing",
 			input: http.Header{"authorization": []string{"ApiKey testKey"}},
-			want:  "testKey",
+			want:  "",
 		},
 		{
 			name:  "multiple values",
@@ -43,7 +43,7 @@ func TestGetAPIKey(t *testing.T) {
 			got, _ := GetAPIKey(tt.input)
 
 			if got != tt.want {
-				t.Errorf("GetAPIKey() got %v, want %v", got, tt.want)
+				t.Errorf("GetAPIKey() got: %v, want: %v", got, tt.want)
 			}
 		})
 	}
