@@ -34,6 +34,6 @@ jobs:
 
         - name: Install staticcheck and run linter
           run: |
+            export PATH='$PATH:$(go env GOPATH)/bin'
             go install honnef.co/go/tools/cmd/staticcheck@latest
-            echo '$(go env GOPATH)/bin' >> "GITHUB_PATH"
             staticcheck ./...
