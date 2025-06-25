@@ -35,6 +35,6 @@ jobs:
         - name: Install staticcheck and run linter
           run: |
             go install honnef.co/go/tools/cmd/staticcheck@latest
-            echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
-            source ~/.bashrc
+            # echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+            # source ~/.bashrc
             staticcheck ./...
