@@ -22,5 +22,5 @@ jobs:
       # - name: Force Failure
       #   run: (exit 1)
 
-      - name: Check Go version
-        run: go test ./...
+      - name: Golang test
+        run: go test ./... -cover
