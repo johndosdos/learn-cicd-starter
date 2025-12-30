@@ -23,4 +23,4 @@ jobs:
       #   run: (exit 1)
 
       - name: Check Go version
-        run: go version
+        run: go test ./...
